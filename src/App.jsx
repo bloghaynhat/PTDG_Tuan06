@@ -1,14 +1,15 @@
-import Count from './Count'
-import FoodList from './FoodList'
-import InputRef from './InputRef'
+import { Route, Routes } from 'react-router-dom'
+import Bai1 from './Bai1'
+import TodoApp1 from './TodoApp1'
+
 
 function App() {
     return (
-        <div className=''>
-        <Count className={"border-amber-100 border rounded-lg p-8 w-4/5 m-auto"} />
-        <InputRef className={"border-amber-100 border rounded-lg p-8 w-4/5 m-auto mt-4"} />
-        <FoodList className={"border-amber-100 border rounded-lg p-8 w-4/5 m-auto mt-4"} />
-        </div>
+        <Routes>
+            <Route path='/' element={<Bai1/>}></Route> 
+            <Route path='/Todo' element={<TodoApp1/>}></Route>
+        </Routes>
+        
     )
 }
 
